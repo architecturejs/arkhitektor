@@ -1,0 +1,45 @@
+{
+  "name": "arkhitektor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "aneurysm",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "dev": "tsx src/commands/ni.ts",
+    "nr": "tsx src/commands/nr.ts",
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "release": "bumpp && npm publish",
+    "typecheck": "tsc",
+    "lint": "eslint .",
+    "test": "vitest"
+  },
+  "bin": {
+    "generate": "bin/generate.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "keywords": [
+    "architecture",
+    "generator"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.10.0",
+    "@types/yargs": "^17.0.33",
+    "eslint": "^9.15.0",
+    "tinyglobby": "^0.2.10",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.16.0",
+    "unbuild": "^2.0.0"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
