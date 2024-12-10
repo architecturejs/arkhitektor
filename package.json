@@ -9,7 +9,6 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "dev": "tsx src/commands/ni.ts",
-    "nr": "tsx src/commands/nr.ts",
     "build": "unbuild",
     "stub": "unbuild --stub",
     "release": "bumpp && npm publish",
@@ -29,14 +28,14 @@
     "generator"
   ],
   "devDependencies": {
-    "@eslint/js": "^9.15.0",
+    "@eslint/js": "^9.16.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.10.0",
     "@types/yargs": "^17.0.33",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "tinyglobby": "^0.2.10",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.16.0",
+    "typescript-eslint": "^8.18.0",
     "unbuild": "^2.0.0"
   },
   "dependencies": {
