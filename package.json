@@ -2,7 +2,6 @@
   "name": "arkhitektor",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "author": "aneurysm",
   "license": "MIT",
   "type": "module",
@@ -19,8 +18,19 @@
   "bin": {
     "generate": "bin/generate.mjs"
   },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "bin",
+    "*.d.ts",
     "dist"
   ],
   "keywords": [
